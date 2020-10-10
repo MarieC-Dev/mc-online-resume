@@ -1,0 +1,32 @@
+#about {
+    @include grid($template-rows: auto auto);
+    @include text-color($light-color);
+    overflow-x: hidden;
+
+    @media screen and (min-width: 360px) and (max-width: 1260px){
+        @include grid($template-rows: auto auto auto, $padding: 3rem 0);
+        display: flex;
+        flex-direction: column;
+    }
+
+    #container-about {
+        grid-column: 2/8;
+        grid-row: 2/3;
+        position: relative;
+
+        #about-text { margin-bottom: 2rem; }
+
+        @media screen and (min-width: 360px) and (max-width: 1260px){
+            grid-column: 2/12; // max-width: 800px;
+        }
+        /*@media screen and (min-width: 799px) and (max-width: 1260px){
+            grid-column: 2/12;
+            display: flex;
+            align-items: flex-end;
+        }*/
+    
+        // Contact in _about-contact.scss components
+    }
+    
+    // container-image in _about-photo.scss components
+}

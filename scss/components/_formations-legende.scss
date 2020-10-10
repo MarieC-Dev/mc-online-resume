@@ -1,0 +1,118 @@
+#container-legende {
+    width: auto;
+    height: auto;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    //background: #050801;
+    padding: 1.5rem 0;
+
+    @media screen and (min-width: 360px) and (max-width: 1260px){
+        padding: 3rem 0 1rem 0;
+    }
+
+    #legende {
+        position: relative;
+        padding: 2rem 3.5rem;
+        text-decoration: none;
+        transition: 0.5s;
+        overflow: hidden;
+
+        @media screen and (min-width: 360px) and (max-width: 1260px){
+            padding: 1.5rem 2.5rem;
+        }
+
+        .animation {
+            position: absolute;
+            display: block;
+        }
+
+        .animation:nth-child(1) {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: .2rem;
+            background: linear-gradient(90deg, transparent, $medium-color);
+            animation: animBtn 1s linear infinite;
+        }
+        .animation:nth-child(2) {
+            top: -100%;
+            right: 0;
+            width: .2rem;
+            height: 100%;
+            background: linear-gradient(180deg, transparent, $medium-color);
+            animation: animBtn2 1s linear infinite;
+            animation-delay: .5s;
+        }
+        .animation:nth-child(3) {
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: .2rem;
+            background: linear-gradient(270deg, transparent, $medium-color);
+            animation: animBtn3 1s linear infinite;
+            animation-delay: 1s;
+        }
+        .animation:nth-child(4) {
+            bottom: -100%;
+            left: 0;
+            width: .2rem;
+            height: 100%;
+            background: linear-gradient(360deg, transparent, $medium-color);
+            animation: animBtn4 1s linear infinite;
+            animation-delay: 1.5s;
+        }
+        
+        @keyframes animBtn {
+            0% {
+                left: -100%;
+            }
+            100% {
+                left: 100%;
+            }
+        }
+        
+        @keyframes animBtn2 {
+            0% {
+                top: -100%;
+            }
+            100% {
+                top: 100%;
+            }
+        }
+        
+        @keyframes animBtn3 {
+            0% {
+                right: -100%;
+            }
+            100% {
+                right: 100%;
+            }
+        }
+        
+        @keyframes animBtn4 {
+            0% {
+                bottom: -100%;
+            }
+            100% {
+                bottom: 100%;
+            }
+        }
+
+        h2 { margin-bottom: 1rem; }
+
+        ul {
+            li :not(:nth-child(3)){ margin-bottom: .5rem; }
+
+            li {
+                span {
+                    font-weight: 700;
+                    color: $medium-color;
+                }
+            }
+                
+        }
+
+    }
+
+}  

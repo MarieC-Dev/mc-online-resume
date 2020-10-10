@@ -1,0 +1,100 @@
+
+/* ========== */
+/*   MIXINS   */
+/* ========== */
+
+// Mixin grid section
+@mixin grid($template-rows, $padding: 6rem 0) {
+    display: grid;
+    padding: $padding;
+    grid-template-columns: 1fr repeat(12, 68px) 1fr;
+    grid-template-rows: $template-rows;
+    grid-auto-rows: 0;
+    column-gap: 32px;
+
+    @media screen and (min-width: 320px) and (max-width: 500px) {
+        display: grid;
+        padding: $padding;
+        grid-template-columns: 1.5rem repeat(10, 1fr) 1.5rem;
+        grid-template-rows: $template-rows;
+        grid-auto-rows: 0;
+        column-gap: 0;
+    }
+
+    @media screen and (min-width: 499px) and (max-width: 800px) {
+        display: grid;
+        padding: $padding;
+        grid-template-columns: 2rem repeat(10, 1fr) 2rem;
+        grid-template-rows: $template-rows;
+        grid-auto-rows: 0;
+        column-gap: 0;
+    }
+
+    @media screen and (min-width: 799px) and (max-width: 1260px) {
+        display: grid;
+        padding: $padding;
+        grid-template-columns: 3rem repeat(10, 1fr) 3rem;
+        grid-template-rows: $template-rows;
+        grid-auto-rows: 0;
+        column-gap: 0;
+    }
+}
+
+// Animation button scroll (header)
+@mixin btn-scroll() {
+    border-radius: 4rem;
+    background-color: $medium-color;
+    transform: rotate(1turn);
+    transition: .6s ease-out;
+
+    @media screen and (min-width: 320px) and (max-width: 1260px){
+        transform: rotate(0turn);
+        background-color: inherit;
+    }
+}
+
+// Underline hover navigation
+@mixin underline-nav($width) {
+    content: "";
+    position: absolute;
+    display: block;
+    width: $width;
+    height: .2rem;
+    background-color: $medium-color;
+    margin-top: .4rem;
+    transition: .3s ease-out;
+}
+
+// Title of section
+@mixin title-section {
+    font-size: $ft-size-medium;
+    line-height: $line-height-medium;
+    font-weight: 700;
+}
+
+// Underline of section
+@mixin underline-section {
+    display: inline-block;
+    grid-column: 2/5;
+    grid-row: 1/2;
+    width: 5rem;
+    height: .25rem;
+    margin: .75rem 0 2rem 0;
+}
+
+// COLOR OF TEXT (couleur de texte en fonction du background)
+@mixin text-color($background-color) { // Dans header ou main ou section ou footer
+    @if $background-color == $dark-color {
+        background-color: $dark-color;
+        color: $light-color;
+    } @else if $background-color == $light-color{
+        background-color: $light-color;
+        color: $dark-color;
+    } @else if $background-color == $secondary-color{
+        background-color: $secondary-color;
+        color: $light-color;
+    } @else {
+        p { color: $light-color; }
+    }
+}
+

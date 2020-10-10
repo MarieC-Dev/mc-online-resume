@@ -1,0 +1,15 @@
+// Title + underline section
+
+.header-section {
+    grid-column: 2/8;
+    grid-row: 1/2;
+
+    h1 {
+        @include title-section;
+    }
+
+    img {
+        @include underline-section;
+        grid-row: 1/2;
+    }
+}

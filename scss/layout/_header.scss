@@ -1,0 +1,51 @@
+
+header {
+    background-image: url("../img/pisa2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    //height: 900px;
+    display: flex;
+    @include grid($template-rows: 80px 600px);
+
+    @media screen and (min-width: 360px) and (max-width: 954px){
+        @include grid($template-rows: 75px 600px, $padding: 3rem 0);
+    }
+
+    // Logo in _logo.scss components
+}
+
+/* ============== */
+/*   NAVIGATION   */
+/* ============== */
+
+// Burger in _menu.scss components
+// Menu (navigation) in _menu.scss components
+
+#body-header {
+    grid-column: 2/14;
+    grid-row: 2/3;
+    height: auto;
+    margin-top: 26rem;
+
+    @media screen and (min-width: 360px) and (max-width: 1260px){
+        grid-column: 2/12;
+    }
+
+    #scroll {
+        display: block;
+        justify-content: center;
+        height: 5rem;
+        width: auto;
+        margin: auto;
+        cursor: pointer;
+
+        &:hover { 
+            @include btn-scroll();
+        }
+
+        @media screen and (min-width: 360px) and (max-width: 1260px){
+            height: 4rem;
+        }
+    }
+}

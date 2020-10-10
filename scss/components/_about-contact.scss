@@ -1,0 +1,35 @@
+#contact {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 360px) and (max-width: 1260px){
+        grid-row: 2/3;
+    }
+
+    div {
+        display: flex;
+        align-content: center;
+        margin-bottom: 1rem;
+
+        .arrow {
+            width: auto;
+            height: 1.2rem;
+        }
+
+        > p {
+            margin: 0 0 auto 1rem;
+            font-size: $ft-size-text;
+            font-weight: 700;
+            line-height: $line-height-text;
+
+            @media screen and (min-width: 799px) and (max-width: 1260px){
+                width: 360px;
+            }
+
+            a {
+                color: $medium-color;
+                font-weight: 400;
+            }
+        }
+    }
+}

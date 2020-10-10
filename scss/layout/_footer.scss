@@ -1,0 +1,41 @@
+footer {
+    @include grid(auto);
+    padding-bottom: 4rem;
+    @include text-color($light-color);
+
+    @media screen and (min-width: 360px) and (max-width: 1260px){
+        @include grid($template-rows: auto auto auto, $padding: 3rem 0);
+        display: flex;
+        flex-direction: column;
+    }
+
+    p {
+        grid-column: 2/14;
+        grid-row: 1/2;
+        text-align: center;
+        margin: 0 auto;
+
+        @media screen and (min-width: 360px) and (max-width: 1260px){
+            grid-column: 2/12;
+            display: flex;
+            flex-direction: column;
+            
+            #linkedin { margin-top: 1rem; }
+        }
+
+        a:hover {
+            color: $medium-color;
+        }
+
+        span { font-weight: 700; }
+
+        #backToTopFooter { 
+            font-weight: 700; 
+            color: $medium-color;
+
+            @media screen and (min-width: 360px) and (max-width: 1260px){
+                margin-top: 2rem;
+            }
+        }
+    }
+}

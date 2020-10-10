@@ -1,0 +1,115 @@
+#competences {
+    @include grid($template-rows: auto auto auto);
+    @include text-color($dark-color);
+
+    @media screen and (min-width: 360px) and (max-width: 1260px){
+        @include grid($template-rows: auto auto auto, $padding: 3rem 0);
+        display: flex;
+        flex-direction: column;
+    }
+
+    #competences-text {
+        grid-column: 2/14;
+        grid-row: 2/3;
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 2rem;
+
+        @media screen and (min-width: 360px) and (max-width: 1260px) {
+            grid-column: 2/12;
+        }
+    }
+
+    #icone-competences {
+        grid-column: 2/14;
+        grid-row: 3/4;
+        display: flex;
+        margin: 0 auto;
+
+        @media screen and (min-width: 360px) and (max-width: 1260px) {
+            grid-column: 2/12;
+            width: 100%;
+            @include grid($template-rows: auto auto auto, $padding: 0);
+            display: flex;
+            flex-direction: column;
+        }
+
+        div {
+            margin: 0 1rem;
+
+            @media screen and (min-width: 360px) and (max-width: 1260px){
+                grid-column: 2/12;
+                display: flex;
+                flex-direction: column;
+                justify-self: center;
+                margin: 0 0 1.5rem 0;
+            }
+
+            img {
+                width: auto;
+                height: 6rem;
+
+                @media screen and (min-width: 360px) and (max-width: 500px){
+                    height: 4rem;
+                    display: flex;
+                    justify-content: center;
+                    margin: 0 auto;
+                }
+                @media screen and (min-width: 499px) and (max-width: 800px){
+                    height: 5rem;
+                }
+            }
+
+            p {
+                text-align: center;
+                margin-top: .5rem;
+            }
+        }
+
+        // MEDIA QUERIES 360 - 500 px (mise en page des icônes Compétences)
+        @media screen and (min-width: 360px) and (max-width: 500px) {
+            #illustrator, #photoshop, #indesign { grid-row: 1/2; }
+            #illustrator { grid-column: 1/4; }
+            #indesign { grid-column: 10/13; justify-items: center; margin: 0 auto; }
+
+            #xd, #html, #css { grid-row: 2/3; }
+            #xd { grid-column: 1/4; }
+            #css { grid-column: 10/13; justify-items: center; margin: 0 auto; }
+
+            #js, #c, #jquery { grid-row: 3/4; margin: 0; }
+            #js { grid-column: 1/4; }
+            #jquery { grid-column: 10/13; justify-items: center; margin: 0 auto; }
+        }
+
+        // MEDIA QUERIES 499 - 800 px (mise en page des icônes Compétences)
+        @media screen and (min-width: 499px) and (max-width: 800px){
+            #illustrator, #photoshop, #indesign { grid-row: 1/2; }
+            #illustrator { grid-column: 2/5; }
+            #indesign { grid-column: 9/12; justify-items: center; margin: 0 auto; }
+
+            #xd, #html, #css { grid-row: 2/3; }
+            #xd { grid-column: 2/5; }
+            #css { grid-column: 9/12; justify-items: center; margin: 0 auto; }
+
+            #js, #c, #jquery { grid-row: 3/4; margin: 0; }
+            #js { grid-column: 2/5; }
+            #jquery { grid-column: 9/12; justify-items: center; margin: 0 auto; }
+        }
+
+        // MEDIA QUERIES 799 - 1260 px (mise en page des icônes Compétences)
+        @media screen and (min-width: 799px) and (max-width: 1260px){
+            #illustrator, #photoshop, #indesign { grid-row: 1/2; }
+            #illustrator { grid-column: 3/6; }
+            #indesign { grid-column: 8/11; justify-items: center; margin: 0 auto; }
+
+            #xd, #html, #css { grid-row: 2/3; }
+            #xd { grid-column: 3/6; }
+            #css { grid-column: 8/11; justify-items: center; margin: 0 auto; }
+
+            #js, #c, #jquery { grid-row: 3/4; margin: 0; }
+            #js { grid-column: 3/6; }
+            #jquery { grid-column: 8/11; justify-items: center; margin: 0 auto; }
+        }
+        
+    }
+}
