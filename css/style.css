@@ -512,12 +512,23 @@ a {
 #container-legende #legende h2 {
   margin-bottom: 1rem;
 }
+@media screen and (min-width: 360px) and (max-width: 1260px) {
+  #container-legende #legende h2 {
+    font-size: 22px;
+    margin-bottom: 0.5rem;
+  }
+}
 #container-legende #legende ul li :not(:nth-child(3)) {
   margin-bottom: 0.5rem;
 }
 #container-legende #legende ul li span {
   font-weight: 700;
   color: #3498db;
+}
+@media screen and (min-width: 360px) and (max-width: 1260px) {
+  #container-legende #legende ul li {
+    font-size: 14px;
+  }
 }
 
 .header-section {
@@ -611,16 +622,28 @@ a {
 }
 @media screen and (min-width: 360px) and (max-width: 1260px) {
   .group-icons {
-    justify-content: space-evenly;
     margin: 0 auto;
+  }
+}
+@media screen and (min-width: 360px) and (max-width: 480px) {
+  .group-icons {
+    grid-column: 1/13;
   }
 }
 .group-icons #div-development {
   display: flex;
 }
+.group-icons #div-development .wrapper-icons {
+  padding: 0;
+}
+@media screen and (min-width: 360px) and (max-width: 480px) {
+  .group-icons #div-development {
+    flex-wrap: wrap;
+  }
+}
 .group-icons .wrapper-icons {
-  width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   padding: 1.5rem 0;
 }
@@ -647,7 +670,6 @@ a {
 }
 @media screen and (min-width: 360px) and (max-width: 1260px) {
   .group-icons .wrapper-icons {
-    justify-content: space-evenly;
     margin: 0 auto;
   }
 }
@@ -660,7 +682,12 @@ a {
     display: flex;
     flex-direction: column;
     justify-self: center;
-    margin: 0 0 1.5rem 0;
+    margin: 0 1rem 1.5rem 1rem;
+  }
+}
+@media screen and (min-width: 360px) and (max-width: 480px) {
+  .group-icons .wrapper-icons div {
+    margin: 0 0.5rem 1.5rem 0.5rem;
   }
 }
 .group-icons .wrapper-icons div img {
@@ -710,7 +737,6 @@ a {
 @media screen and (min-width: 360px) and (max-width: 1260px) {
   .design-icons {
     grid-column: 1/13;
-    width: 100%;
   }
 }
 
@@ -721,7 +747,6 @@ a {
 @media screen and (min-width: 360px) and (max-width: 1260px) {
   .integration-icons {
     grid-column: 1/13;
-    width: 100%;
   }
 }
 
@@ -732,7 +757,6 @@ a {
 @media screen and (min-width: 360px) and (max-width: 1260px) {
   .development-icons {
     grid-column: 1/13;
-    width: 100%;
   }
 }
 
@@ -1376,7 +1400,7 @@ header #body-header #scroll:hover {
   }
 }
 #competences #icone-competences {
-  grid-column: 2/14;
+  grid-column: 1/15;
   grid-row: 2/3;
   display: grid;
   padding: 0;
@@ -1385,6 +1409,7 @@ header #body-header #scroll:hover {
   grid-auto-rows: 0;
   column-gap: 32px;
   flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
   margin: 0 auto;
   /*@media screen and (min-width: 360px) and (max-width: 500px) {
@@ -1460,7 +1485,6 @@ header #body-header #scroll:hover {
 @media screen and (min-width: 360px) and (max-width: 1260px) {
   #competences #icone-competences {
     grid-column: 2/12;
-    width: 100%;
     display: grid;
     padding: 0;
     grid-template-columns: 1fr repeat(12, 68px) 1fr;

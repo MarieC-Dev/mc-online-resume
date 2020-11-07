@@ -21,16 +21,16 @@
     }
 
     #icone-competences {
-        grid-column: 2/14;
+        grid-column: 1/15;
         grid-row: 2/3;
         @include grid($template-rows: auto auto auto, $padding: 0);
         flex-direction: column;
+        flex-wrap: wrap;
         justify-content: center;
         margin: 0 auto;
 
         @media screen and (min-width: 360px) and (max-width: 1260px) {
             grid-column: 2/12;
-            width: 100%;
             @include grid($template-rows: auto auto auto, $padding: 0);
             display: flex;
             flex-direction: column;

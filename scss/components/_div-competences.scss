@@ -4,17 +4,25 @@
     margin: 0 auto 3rem auto;
 
     @media screen and (min-width: 360px) and (max-width: 1260px) {
-        justify-content: space-evenly;
         margin: 0 auto;
+    }
+    @media screen and (min-width: 360px) and (max-width: 480px) {
+        grid-column: 1/13;
     }
 
     #div-development {
         display: flex;
+
+        .wrapper-icons { padding: 0; }
+
+        @media screen and (min-width: 360px) and (max-width: 480px) {
+            flex-wrap: wrap;
+        }
     }
 
     .wrapper-icons {
-        width: 100%;
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         //border: 3px red solid;
         padding: 1.5rem 0;
@@ -40,7 +48,6 @@
         .percentage { display: none; }
 
         @media screen and (min-width: 360px) and (max-width: 1260px) {
-            justify-content: space-evenly;
             margin: 0 auto;
         }
 
@@ -52,7 +59,10 @@
                 display: flex;
                 flex-direction: column;
                 justify-self: center;
-                margin: 0 0 1.5rem 0;
+                margin: 0 1rem 1.5rem 1rem;
+            }
+            @media screen and (min-width: 360px) and (max-width: 480px) {
+                margin: 0 .5rem 1.5rem .5rem;
             }
         
             img {
@@ -101,7 +111,6 @@
 
     @media screen and (min-width: 360px) and (max-width: 1260px) {
         grid-column: 1/13;
-        width: 100%;
     }
 }
 .integration-icons { 
@@ -110,7 +119,6 @@
 
     @media screen and (min-width: 360px) and (max-width: 1260px) {
         grid-column: 1/13;
-        width: 100%;
     }
 }
 .development-icons { 
@@ -119,6 +127,5 @@
 
     @media screen and (min-width: 360px) and (max-width: 1260px) {
         grid-column: 1/13;
-        width: 100%;
     }
 }
