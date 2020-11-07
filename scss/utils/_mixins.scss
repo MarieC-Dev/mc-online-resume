@@ -93,6 +93,9 @@
     } @else if $background-color == $secondary-color{
         background-color: $secondary-color;
         color: $light-color;
+    } @else if $background-color == $medium-color{
+        background-color: $medium-color;
+        color: $light-color;
     } @else {
         p { color: $light-color; }
     }

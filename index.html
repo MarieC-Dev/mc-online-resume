@@ -3,12 +3,12 @@
 <head>
 <!-- TETE DE PAGE -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Gérer le resposive sur les petites surfaces -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Gérer le responsive sur les petites surfaces -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge"> <!-- Pour les derniers moteur de rendu microsoft -->
     <title>MARIE Costa : CV web</title>
     <link rel="stylesheet" href="./css/style.css">
-
-<!-- TETE DE PAGE -->
+    <!-- Javascript -->
+    <script src="./js/script.js"></script>
 
 </head>
 
@@ -42,6 +42,10 @@
                 <p><a href="#ancre-about" id="about-nav">A propos</a></p>
                 <div class="line-nav"></div>
             </li>
+            <li id="competences-menu">
+                <p><a href="#ancre-competences" id="competences-nav">Compétences</a></p>
+                <div class="line-nav"></div>
+            </li> 
             <li id="formations-menu">
                 <p><a href="#ancre-formations" id="formations-nav">Formations</a></p>
                 <div class="line-nav"></div>
@@ -49,14 +53,10 @@
             <li id="experiences-menu">
                 <p><a href="#ancre-experiences" id="experiences-nav">Expériences</a></p>
                 <div class="line-nav"></div>
-            </li>
-            <li id="competences-menu">
-                <p><a href="#ancre-competences" id="competences-nav">Compétences</a></p>
-                <div class="line-nav"></div>
-            </li>                        
+            </li>                       
         </ul>
 
-                <!-- *** -->
+        <h1>Développeuse Full-Stack</h1>
 
         <!-- Texte head middle -->
         <div id="body-header">
@@ -118,7 +118,107 @@
                 <p>Match de handball sénior, championnat pré-national, Bouc-Bel-Air (13) contre Chateauneuf-Les-Martigues (13), mars 2019.</p>
             </div>
         </section>
+    <!-- *** -->
+    <!-- *** -->
 
+    <!--COMPETENCES-->
+    <!--COMPETENCES-->
+        <a id="ancre-competences"></a>
+        <section id="competences">
+            <div class="header-section">
+                <h1 id="competences-title">Compétences</h1>
+                <img class="underline-section" src="./img/Rect-souligne.png" alt="Rectangle orange souligne">    
+            </div>
+
+            <!--Icone competences-->
+            <div id="icone-competences">
+                
+                <div class="group-icons design-icons">
+                    <h3>Compétences Adobe :</h3>
+
+                    <div class="wrapper-icons">
+
+                        <p class="percentage">80%</p>
+
+                        <div id="illustrator">
+                            <img id="icone-illustrator" src="./img/ai.svg" alt="Icône Adobe Illustrator">
+                            <p>Illustrator</p>
+                        </div>
+
+                        <div id="photoshop">
+                            <img id="icone-photoshop" src="./img/ps.svg" alt="Icône Adobe Photoshop">
+                            <p>Photoshop</p>
+                        </div>
+
+                        <div id="indesign">
+                            <img id="icone-indesign" src="./img/id.svg" alt="Icône Adobe Indesign">
+                            <p>InDesign</p>
+                        </div>
+
+                        <div id="xd">
+                            <img id="icone-xd" src="./img/xd.svg" alt="Icône Adobe Xd">
+                            <p>Xd</p>
+                        </div>
+
+                        <img src="./img/mouse-pointer-solid.svg" alt="pointer" id="pointer">
+                    </div>
+                </div>
+                
+                <div class="group-icons integration-icons">
+                    <h3>Compétences en intégration web :</h3>
+                    <div class="wrapper-icons">
+                        <p class="percentage">80%</p>
+                        <div id="html">
+                            <img id="icone-html" src="./img/html.svg" alt="Icône HTML">
+                            <p>HTML</p>
+                        </div>
+                        <div id="css">
+                            <img id="icone-css" src="./img/css.svg" alt="Icône CSS">
+                            <p>CSS & Sass</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <div class="group-icons development-icons">
+                    <h3>Compétences en développement :</h3>
+                    <div id="div-development">
+                        <div class="wrapper-icons">
+                            <p class="percentage">50%</p>
+                            <div id="js">
+                                <img id="icone-js" src="./img/js.svg" alt="Icône Javascript">
+                                <p>Javascript</p>
+                            </div>
+                        </div>
+
+                        <div class="wrapper-icons">
+                            <p class="percentage">40%</p>
+                            <div id="jquery">
+                                <img id="icone-jquery" src="./img/jqurery.svg" alt="Icône jQuery">
+                                <p>jQuery</p>
+                            </div>
+                        </div>
+                        
+                        <div class="wrapper-icons">
+                            <p class="percentage">25%</p>
+                            <div id="php">
+                                <img id="icone-php" src="./img/php-brands.svg" alt="Icône PHP">
+                                <p>PHP</p>
+                            </div>
+                        </div> 
+    
+                        <div class="wrapper-icons">
+                            <p class="percentage">30%</p>
+                            <div id="c">
+                                <img id="icone-c" src="./img/c.svg" alt="Icône langage C">
+                                <p>Langage C</p>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+        </section> 
     <!-- *** -->
     <!-- *** -->
 
@@ -154,8 +254,8 @@
                 </div>
             </div>
         </section>
-
-            <!-- *** -->
+    <!-- *** -->
+    <!-- *** -->
 
     <!--EXPERIENCES-->
     <!--EXPERIENCES-->
@@ -229,58 +329,8 @@
             </div>
 
         </section>
-
-    <!--COMPETENCES-->
-    <!--COMPETENCES-->
-        <a id="ancre-competences"></a>
-        <section id="competences">
-            <div class="header-section">
-                <h1 id="competences-title">Compétences</h1>
-                <img class="underline-section" src="./img/Rect-souligne.png" alt="Rectangle orange souligne">    
-            </div>
-
-            <p id="competences-text">Voici les compétences que j'ai acquises lors de mes formations :</p>
-
-                <!--Icone competences-->
-            <div id="icone-competences">
-                <div id="illustrator">
-                    <img id="icone-illustrator" src="./img/ai.svg" alt="Icône Adobe Illustrator">
-                    <p>Illustrator</p>
-                </div>
-                <div id="photoshop">
-                    <img id="icone-photoshop" src="./img/ps.svg" alt="Icône Adobe Photoshop">
-                    <p>Photoshop</p>
-                </div>
-                <div id="indesign">
-                    <img id="icone-indesign" src="./img/id.svg" alt="Icône Adobe Indesign">
-                    <p>InDesign</p>
-                </div>
-                <div id="xd">
-                    <img id="icone-xd" src="./img/xd.svg" alt="Icône Adobe Xd">
-                    <p>Xd</p>
-                </div>
-                <div id="html">
-                    <img id="icone-html" src="./img/html.svg" alt="Icône HTML">
-                    <p>HTML</p>
-                </div>
-                <div id="css">
-                    <img id="icone-css" src="./img/css.svg" alt="Icône CSS">
-                    <p>CSS & Sass</p>
-                </div>
-                <div id="js">
-                    <img id="icone-js" src="./img/js.svg" alt="Icône Javascript">
-                    <p>Javascript</p>
-                </div>
-                <div id="c">
-                    <img id="icone-c" src="./img/c.svg" alt="Icône langage C">
-                    <p>Langage C</p>
-                </div>
-                <div id="jquery">
-                    <img id="icone-jquery" src="./img/jqurery.svg" alt="Icône jQuery">
-                    <p>jQuery</p>
-                </div>
-            </div>
-        </section> 
+    <!-- *** -->
+    <!-- *** -->
     </main>
 
     <!--FOOTER-->
@@ -289,20 +339,24 @@
     <!--FOOTER-->
     <!--FOOTER-->
     <footer>
-        <p id="copyright">
-            Copyright MARIE Costa © - Tous droits réservés
-            <br>
-            <br>
-                <a id="linkedin" href="https://www.linkedin.com/in/marie-costa-850a65188/" target="_blank"> LinkedIn <span>(Marie Costa) </span></a>
-                - 
-                <a id="github" href="https://github.com/MarieC-Dev" target="_blank">Github <span>(MarieC-Dev)</span></a>
-            <br>
-            <br>
-            <a id="backToTopFooter" href="#backToTop">Retourner en haut de la page</a>
-        </p>
+        <div id="copyright">
+            <p>Copyright MARIE Costa © - Tous droits réservés</p>
+
+            <div>
+                <a href="https://www.linkedin.com/in/marie-costa-850a65188/" target="_blank">
+                    <img src="./img/linkedin-brands.svg" alt="linkedin icons">
+                </a>
+    
+                <a id="github" href="https://github.com/MarieC-Dev" target="_blank">
+                    <img src="./img/github-brands.svg" alt="github icons">
+                </a>
+            </div>
+        </div>
+
+        <a id="backToTopFooter" href="#backToTop">Retourner en haut de la page</a>
+
     </footer>
 
-    <!-- Javascrip -->
-    <script src="./js/script.js"></script>
+    
 </body>
 </html>

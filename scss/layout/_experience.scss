@@ -1,6 +1,6 @@
 #experiences {
     @include grid($template-rows: auto 26.5rem auto);
-    @include text-color($light-color);
+    @include text-color($dark-color);
 
     @media screen and (min-width: 360px) and (max-width: 1260px){
         @include grid($template-rows: auto auto auto, $padding: 3rem 0 0 0);
@@ -13,7 +13,7 @@
         grid-column: 1/15;
         grid-row: 2/3;
         @include grid($template-rows: auto auto auto auto auto, $padding: 0);
-        height: 77px;
+        height: 79px;
 
         @media screen and (min-width: 360px) and (max-width: 1260px) {
             grid-column: 1/13;

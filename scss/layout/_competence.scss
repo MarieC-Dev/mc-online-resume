@@ -1,5 +1,5 @@
 #competences {
-    @include grid($template-rows: auto auto auto);
+    @include grid($template-rows: auto auto);
     @include text-color($dark-color);
 
     @media screen and (min-width: 360px) and (max-width: 1260px){
@@ -8,7 +8,7 @@
         flex-direction: column;
     }
 
-    #competences-text {
+    .competences-text {
         grid-column: 2/14;
         grid-row: 2/3;
         font-size: 18px;
@@ -22,8 +22,10 @@
 
     #icone-competences {
         grid-column: 2/14;
-        grid-row: 3/4;
-        display: flex;
+        grid-row: 2/3;
+        @include grid($template-rows: auto auto auto, $padding: 0);
+        flex-direction: column;
+        justify-content: center;
         margin: 0 auto;
 
         @media screen and (min-width: 360px) and (max-width: 1260px) {
@@ -34,40 +36,14 @@
             flex-direction: column;
         }
 
-        div {
-            margin: 0 1rem;
-
-            @media screen and (min-width: 360px) and (max-width: 1260px){
-                grid-column: 2/12;
-                display: flex;
-                flex-direction: column;
-                justify-self: center;
-                margin: 0 0 1.5rem 0;
-            }
-
-            img {
-                width: auto;
-                height: 6rem;
-
-                @media screen and (min-width: 360px) and (max-width: 500px){
-                    height: 4rem;
-                    display: flex;
-                    justify-content: center;
-                    margin: 0 auto;
-                }
-                @media screen and (min-width: 499px) and (max-width: 800px){
-                    height: 5rem;
-                }
-            }
-
-            p {
-                text-align: center;
-                margin-top: .5rem;
-            }
+        h3 { 
+            margin-bottom: 1.5rem;
+            text-align: center;
+            text-decoration: underline;
         }
 
         // MEDIA QUERIES 360 - 500 px (mise en page des icônes Compétences)
-        @media screen and (min-width: 360px) and (max-width: 500px) {
+        /*@media screen and (min-width: 360px) and (max-width: 500px) {
             #illustrator, #photoshop, #indesign { grid-row: 1/2; }
             #illustrator { grid-column: 1/4; }
             #indesign { grid-column: 10/13; justify-items: center; margin: 0 auto; }
@@ -79,10 +55,10 @@
             #js, #c, #jquery { grid-row: 3/4; margin: 0; }
             #js { grid-column: 1/4; }
             #jquery { grid-column: 10/13; justify-items: center; margin: 0 auto; }
-        }
+        }*/
 
         // MEDIA QUERIES 499 - 800 px (mise en page des icônes Compétences)
-        @media screen and (min-width: 499px) and (max-width: 800px){
+        /*@media screen and (min-width: 499px) and (max-width: 800px){
             #illustrator, #photoshop, #indesign { grid-row: 1/2; }
             #illustrator { grid-column: 2/5; }
             #indesign { grid-column: 9/12; justify-items: center; margin: 0 auto; }
@@ -94,10 +70,10 @@
             #js, #c, #jquery { grid-row: 3/4; margin: 0; }
             #js { grid-column: 2/5; }
             #jquery { grid-column: 9/12; justify-items: center; margin: 0 auto; }
-        }
+        }*/
 
         // MEDIA QUERIES 799 - 1260 px (mise en page des icônes Compétences)
-        @media screen and (min-width: 799px) and (max-width: 1260px){
+        /*@media screen and (min-width: 799px) and (max-width: 1260px){
             #illustrator, #photoshop, #indesign { grid-row: 1/2; }
             #illustrator { grid-column: 3/6; }
             #indesign { grid-column: 8/11; justify-items: center; margin: 0 auto; }
@@ -109,7 +85,7 @@
             #js, #c, #jquery { grid-row: 3/4; margin: 0; }
             #js { grid-column: 3/6; }
             #jquery { grid-column: 8/11; justify-items: center; margin: 0 auto; }
-        }
+        }*/
         
     }
 }

@@ -6,46 +6,77 @@ header {
     background-position: center;
     //height: 900px;
     display: flex;
-    @include grid($template-rows: 80px 600px);
+    @include grid($template-rows: 96px 300px 300px);
 
     @media screen and (min-width: 360px) and (max-width: 954px){
-        @include grid($template-rows: 75px 600px, $padding: 3rem 0);
+        @include grid($template-rows: 80px 300px 300px, $padding: 3rem 0);
     }
 
     // Logo in _logo.scss components
-}
 
-/* ============== */
-/*   NAVIGATION   */
-/* ============== */
+    /* ============== */
+    /*   NAVIGATION   */
+    /* ============== */
 
-// Burger in _menu.scss components
-// Menu (navigation) in _menu.scss components
+    // Burger in _menu.scss components
+    // Menu (navigation) in _menu.scss components
 
-#body-header {
-    grid-column: 2/14;
-    grid-row: 2/3;
-    height: auto;
-    margin-top: 26rem;
+    h1 {
+        grid-column: 2/14;
+        grid-row: 2/3;
+        display: flex;
+        justify-content: center;
+        margin: auto auto 4.5rem auto;
+        font-size: 65px;
+        text-align: center;
+        color: $light-color;
 
-    @media screen and (min-width: 360px) and (max-width: 1260px){
-        grid-column: 2/12;
+        &:hover { color: $medium-color; }
+
+        @media screen and (min-width: 360px) and (max-width: 500px) {
+            grid-column: 2/12;
+            font-size: 40px;
+            margin: auto auto 1.5rem auto;
+        }
+        @media screen and (min-width: 499px) and (max-width: 800px) {
+            grid-column: 2/12;
+            font-size: 40px;
+            margin: auto auto 3rem auto;
+        }
+        @media screen and (min-width: 799px) and (max-width: 1260px) {
+            grid-column: 2/12;
+            font-size: 50px;
+            margin: auto auto 3rem auto;
+        }
     }
 
-    #scroll {
-        display: block;
-        justify-content: center;
-        height: 5rem;
-        width: auto;
-        margin: auto;
-        cursor: pointer;
-
-        &:hover { 
-            @include btn-scroll();
-        }
+    #body-header {
+        grid-column: 2/14;
+        grid-row: 3/4;
+        height: auto;
+        margin: auto auto 4rem auto;
 
         @media screen and (min-width: 360px) and (max-width: 1260px){
-            height: 4rem;
+            grid-column: 2/12;
+        }
+
+        #scroll {
+            display: block;
+            justify-content: center;
+            height: 5rem;
+            width: auto;
+            margin: auto;            
+            cursor: pointer;
+
+            &:hover { 
+                @include btn-scroll();
+            }
+
+            @media screen and (min-width: 360px) and (max-width: 1260px){
+                height: 4rem;
+            }
         }
     }
+
 }
+

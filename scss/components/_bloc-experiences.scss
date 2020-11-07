@@ -42,7 +42,7 @@
     .internship-text {
         width: 14rem;
         padding: 2rem;
-        @include text-color($dark-color);
+        @include text-color($light-color);
         margin: 0 auto;
         text-align: center;
         display: flex;
